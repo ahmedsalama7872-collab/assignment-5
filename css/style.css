@@ -11,6 +11,7 @@
 body{
      font-family: "IBM Plex Sans Arabic", sans-serif;
      background-color: #F9FAFB;
+     text-align: end;
 }
 .flex-center{
     display: flex;
@@ -20,7 +21,7 @@ body{
 .sidebar{
     opacity: 0;
     background-color: #fff;
-    width: 255px;
+    width: 15%;
     height: 100vh;
     position: fixed;
     right: 0;
@@ -55,12 +56,13 @@ gap: 10px;
 .side-header i{
 width: 20px;
     color: white;
+    font-size: 22px;
 }
 .side-icon{
     background-image: linear-gradient(to top,#4134DC,#2257F6);
    
-    width: 56px;
-    height: 56px;
+    width: 60px;
+    height: 60px;
     border-radius: 15px;
 }
 .side-item{
@@ -100,10 +102,234 @@ background-color: #F7EDFF;
 color:#F54900 ;
 background-color:#FCE5D5 ;
 }
+.section{
+    background-color: #fff;
+    border: 1px solid #E5E7EB;
+    border-radius: 20px;
+    padding:40px 30px;
+    box-shadow: 1.5px 1.5px  #E5E7EB;
+}
+.section h3{
+    font-size: 40px;
+}
+.red{
+    color: red;
+    font-weight: 600;
+}
+.green{
+    color: green;
+    font-weight: 600;
+}
+.container2{
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+
+  gap: 30px 0px;
+  grid-template-areas:
+    "nav nav nav"
+    "money3 money3 money3"
+    "money2 money2 money2"
+    "money1 money1 money1"
+    "recent recent recent"
+    "recent recent recent"
+    "trans trans trans"
+    "trans trans trans"
+    "trans trans trans"
+    "trans trans trans"
+    "bells bells bells"
+    "bells bells bells"
+    "budget budget budget"
+    "budget budget budget"
+    "budget budget budget"
+    "budget budget budget"
+    "analysis analysis analysis"
+    "analysis analysis analysis"
+    "summary summary summary"
+    "summary summary summary"
+    "visa visa visa"
+    "visa visa visa"
+    "visa visa visa"
+    "visa visa visa";
+    
+}
+.money3 { grid-area: money3; }
+
+.money2 { grid-area: money2; }
+
+.money1 { grid-area: money1;
+    
+ }
+
+.recent { grid-area: recent; }
+
+.trans { grid-area: trans; }
+
+.bills { grid-area: bills; }
+
+.visa { grid-area: visa; }
+
+.budget { grid-area: budget; }
+
+.analysis { grid-area: analysis; }
+
+.summary { grid-area: summary; }
+
+
+.nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: linear-gradient(
+    to right,
+    #F6F8FC,
+    #FFFFFF,
+    #F4F8FC);
+flex-wrap: wrap;
+padding: 30px 30px;
+position: relative;
+}
+.nav-left{
+    position: relative;
+}
+.nav-header{
+    margin: 0;
+    transform: scale(0.8);
+    transform-origin: center right;
+}
+.online p{
+    background-color: #F0FDF4;
+    color: #008236;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 10px;
+    
+border: none;
+}
+.online{
+    position: absolute;
+    
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+.nav-icons{
+    display: flex;
+    gap: 10px;
+    flex-direction: row-reverse;
+    
+}
+.nav-icons :last-child{
+position: relative;
+}
+.nav-icons :last-child::after{
+    content:"2";
+    position: absolute;
+background-color: red;
+color: white;
+font-size: 16px;
+border-radius: 50%;
+width: 20px;
+
+height: 20px;
+top:-5px;
+right: -5px;
+}
+.nav-icons i{
+    font-size: 18px;
+    padding: 10px;
+    box-sizing: content-box;
+     border: 1px solid #E5E7EB;
+    border-radius: 10px;
+      box-shadow: 1.5px 1.5px  #E5E7EB;
+}
+.nav-img-lg{
+    display: none;
+}
 @media screen and (min-width:760) {
     
 }
 @media screen and (min-width: 1280px) {
     .sidebar{
 opacity: 1;    }
+.container2 { 
+    margin-top: 30px;
+    width: 81%;
+    margin-left: 2%;
+    margin-right: auto;
+    
+  grid-template-columns: 1fr 1fr 1fr;
+ 
+  gap: 24px 16px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "nav nav nav"
+    "money1 money2 money3"
+    "trans trans recent"
+    "trans trans recent"
+    "trans trans bills"
+    "trans trans bills"
+    "visa analysis budget"
+    "visa analysis budget"
+    "visa summary budget"
+    "visa summary budget";
 }
+
+.nav {
+display: flex;
+justify-content: flex-start;
+flex-direction: row-reverse;
+ }
+ .nav .side-header p{
+    transform: scale(1.4);
+    transform-origin: right center;
+ }
+ .nav-right{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    gap: 50px;
+    align-items: center;
+ }
+ .nav-left{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    gap: 20px;
+    align-items: center;
+ }
+
+
+
+
+.online{
+    width: 80px;
+    position: static;
+}
+.online p
+.nav-img-lg{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+background-color: #fff;
+padding:8px 15px;
+   border: 1px solid #E5E7EB;
+    border-radius: 10px;
+      box-shadow: 1.5px 1.5px  #E5E7EB;
+}
+.lg-left{
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+.lg-left img{
+    width: 40px;
+    border-radius: 30%;
+}}
