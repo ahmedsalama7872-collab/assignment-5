@@ -25,9 +25,7 @@ body{
     background-color: #fff;
     grid-area: sidebar;
     height: 100vh;
-    /* position: fixed;
-    right: 0;
-    top: 0; */
+ 
     border: 1px solid #F0F1F2;
     box-shadow: rgba(0, 0, 0, 0.14) 0px 0px 8px;
 }
@@ -180,6 +178,7 @@ margin: auto;
 
 .nav{
     grid-area: nav;
+    margin-top: 20px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -189,21 +188,17 @@ margin: auto;
     #FFFFFF,
     #F4F8FC);
 flex-wrap: wrap;
-padding: 50px 30px;
-position: relative;
+padding: 20px 30px;
+
 }
-.nav-left{
-    position: relative;
-}
+
 .nav-header{
     margin: 0;
     transform: scale(0.8);
-    position: absolute;
-    top: 10px;
-    right: 20px;
+    
     transform-origin: center right;
 }
-.online p{
+.online p, .online-mobile p{
     background-color: #F0FDF4;
     color: #008236;
     display: flex;
@@ -216,17 +211,21 @@ position: relative;
 border: none;
 }
 .online{
-    position: absolute;
-    
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
+    display: none;
+}
+.online-mobile{
+    width: 100%;
+    order: 10;
+    display: block;
+
+    align-items: center;
+    text-align: center;
 }
 .nav-icons{
     display: flex;
     gap: 10px;
     flex-direction: row-reverse;
-    position: relative;
+
     top: 50px;
     right: -7px;}
 .nav-icons :last-child{
@@ -256,9 +255,7 @@ right: -5px;
 .nav-img-lg{
     display:flex;
     gap: 10px;
-position: relative;
-left: -230px;
-top: 0px;
+
 }
 .lg-right{
     display: none;
@@ -271,7 +268,68 @@ box-sizing: content-box;
 border: 1PX solid #E5E7EB;
 background-color: #fff;
 }
-
+.nav-left{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.recent-card1 , .recent-card2{
+    margin-top: 20px;
+    display: flex;
+   gap: 10px;
+   direction: rtl;
+   padding: 20px 15px;
+   border-radius: 10px;
+position: relative;
+}
+.recent-card1 p , .recent-card2 p{
+font-size: 13px;
+}
+.recent-card1 .time , .recent-card2 .time{
+    font-size: 13px;
+    margin-top: 10px;
+}
+.recent-card1{
+    background-color: #EFF6FF;
+    border-left: 5px solid #2F82FF;
+    
+}
+.recent-card1 .about ,.recent-card2 .about{
+position: absolute;
+top: 20px;
+left: 10px;
+color: #155DFC;
+font-size: 13px;
+font-weight: 600;
+}
+.recent-card2 .about{
+    color:#00A63E ;
+}
+.recent-card2{
+    background-color: #F0FDF4;
+    border-left: 5px solid #00C950;
+}
+.recent-card1 div i , .recent-card2 div i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    padding: 3px;
+    border-radius: 50%;
+    box-sizing: content-box;
+}
+.recent-card1 div i{
+    background-color: #DBEAFE;
+    color: #155DFC;
+    
+}
+.recent-card2 div i{
+    background-color:#DBFCE7 ;
+    color: #00A63E;
+}
 @media screen and (min-width:760px) {
     
 }
@@ -343,12 +401,23 @@ margin-bottom: 20px;
 
 
 .online{
-  margin-left: 600px;
+display: block;
     width: 80px;
     position: static;
 }
-
-
+.online-mobile{
+    display: none;
+}
+.nav-right{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 50px;
+    align-items: center;
+}
+.nav-left{
+    width: auto;
+    gap: 20px;
+}
 .nav-img-lg{
     justify-self: flex-end;
     display: flex;
