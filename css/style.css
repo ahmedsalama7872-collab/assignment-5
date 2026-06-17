@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    
 }
 
 .container{
@@ -11,7 +12,7 @@
 body{
      font-family: "IBM Plex Sans Arabic", sans-serif;
      background-color: #F9FAFB;
-     text-align: end;
+     text-align: right;
 }
 .flex-center{
     display: flex;
@@ -19,13 +20,14 @@ body{
     align-items: center;
 }
 .sidebar{
-    opacity: 0;
+    margin-left: 10px;
+    display: none;
     background-color: #fff;
-    width: 15%;
+    grid-area: sidebar;
     height: 100vh;
-    position: fixed;
+    /* position: fixed;
     right: 0;
-    top: 0;
+    top: 0; */
     border: 1px solid #F0F1F2;
     box-shadow: rgba(0, 0, 0, 0.14) 0px 0px 8px;
 }
@@ -84,7 +86,7 @@ width: 20px;
 .quick i{
     box-sizing: content-box;
     border-radius: 8px;
-padding: 10px;
+    padding: 10px;
 }
 .q1 i{
 color:#155DFC ;
@@ -121,13 +123,14 @@ background-color:#FCE5D5 ;
     font-weight: 600;
 }
 .container2{
-    width: 95%;
-    margin: auto;
-    margin-top: 20px;
+    
+    
+width: 95%;
+margin: auto;
     display: grid;
-
-  gap: 30px 0px;
-  grid-template-areas:
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px 0px;
+    grid-template-areas:
     "nav nav nav"
     "money3 money3 money3"
     "money2 money2 money2"
@@ -158,15 +161,13 @@ background-color:#FCE5D5 ;
 
 .money2 { grid-area: money2; }
 
-.money1 { grid-area: money1;
-    
- }
+.money1 { grid-area: money1;}
 
 .recent { grid-area: recent; }
 
 .trans { grid-area: trans; }
 
-.bills { grid-area: bills; }
+.bells { grid-area: bells; }
 
 .visa { grid-area: visa; }
 
@@ -188,7 +189,7 @@ background-color:#FCE5D5 ;
     #FFFFFF,
     #F4F8FC);
 flex-wrap: wrap;
-padding: 30px 30px;
+padding: 50px 30px;
 position: relative;
 }
 .nav-left{
@@ -197,6 +198,9 @@ position: relative;
 .nav-header{
     margin: 0;
     transform: scale(0.8);
+    position: absolute;
+    top: 10px;
+    right: 20px;
     transform-origin: center right;
 }
 .online p{
@@ -222,8 +226,9 @@ border: none;
     display: flex;
     gap: 10px;
     flex-direction: row-reverse;
-    
-}
+    position: relative;
+    top: 50px;
+    right: -7px;}
 .nav-icons :last-child{
 position: relative;
 }
@@ -249,73 +254,105 @@ right: -5px;
       box-shadow: 1.5px 1.5px  #E5E7EB;
 }
 .nav-img-lg{
+    display:flex;
+    gap: 10px;
+position: relative;
+left: -230px;
+top: 0px;
+}
+.lg-right{
     display: none;
 }
-@media screen and (min-width:760) {
+.lg-left img{
+    width: 35px;
+    border-radius: 30%;
+padding: 12px;
+box-sizing: content-box;
+border: 1PX solid #E5E7EB;
+background-color: #fff;
+}
+
+@media screen and (min-width:760px) {
     
 }
 @media screen and (min-width: 1280px) {
     .sidebar{
-opacity: 1;    }
+display: block;  }
+
 .container2 { 
-    margin-top: 30px;
-    width: 81%;
-    margin-left: 2%;
-    margin-right: auto;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.8fr; 
+   padding-left: 33px;
+  gap: 25px 20px; 
+  grid-template-areas: 
+    "nav nav nav nav nav nav nav nav nav sidebar sidebar"
+    "money3 money3 money3 money2 money2 money2 money1 money1 money1 sidebar sidebar"
+    "money3 money3 money3 money2 money2 money2 money1 money1 money1 sidebar sidebar"
+    "trans trans trans trans trans trans recent recent recent sidebar sidebar"
+    "trans trans trans trans trans trans recent recent recent sidebar sidebar"
+    "trans trans trans trans trans trans recent recent recent sidebar sidebar"
+    "trans trans trans trans trans trans recent recent recent sidebar sidebar"
+    "trans trans trans trans trans trans bells bells bells sidebar sidebar"
+    "trans trans trans trans trans trans bells bells bells sidebar sidebar"
+    "trans trans trans trans trans trans bells bells bells sidebar sidebar"
+    "trans trans trans trans trans trans bells bells bells sidebar sidebar"
+    "visa visa visa analysis analysis analysis budget budget budget sidebar sidebar"
+    "visa visa visa analysis analysis analysis budget budget budget sidebar sidebar"
+    "visa visa visa analysis analysis analysis budget budget budget sidebar sidebar"
+    "visa visa visa analysis analysis analysis budget budget budget sidebar sidebar"
+    "visa visa visa summary summary summary budget budget budget sidebar sidebar"
+    "visa visa visa summary summary summary budget budget budget sidebar sidebar"
+    "visa visa visa summary summary summary budget budget budget sidebar sidebar"
+    "visa visa visa summary summary summary budget budget budget sidebar sidebar"; 
+}
+.sidebar { grid-area: sidebar; }
+.nav { grid-area: nav; }
+.money3 { grid-area: money3; }
+.money2 { grid-area: money2; }
+.money1 { grid-area: money1; }
+.recent { grid-area: recent; }
+.bells { grid-area: bells; }
+
+
+.nav-header{
     
-  grid-template-columns: 1fr 1fr 1fr;
- 
-  gap: 24px 16px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "nav nav nav"
-    "money1 money2 money3"
-    "trans trans recent"
-    "trans trans recent"
-    "trans trans bills"
-    "trans trans bills"
-    "visa analysis budget"
-    "visa analysis budget"
-    "visa summary budget"
-    "visa summary budget";
+    position: static;
+    transform: scale(0.9);
+}
+.nav-icons{
+    position: static;
+}
+.nav .side-header p{
+    transform: scale(1.4);
+    transform-origin: right center;
+}
+
+.section{
+    padding: 20px 30px;
 }
 
 .nav {
+    margin-top: 30px;
 display: flex;
-justify-content: flex-start;
+justify-content: space-between;
 flex-direction: row-reverse;
- }
- .nav .side-header p{
-    transform: scale(1.4);
-    transform-origin: right center;
- }
- .nav-right{
-    width: 50%;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row-reverse;
-    gap: 50px;
-    align-items: center;
- }
- .nav-left{
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row-reverse;
-    gap: 20px;
-    align-items: center;
- }
 
-
+padding: 20px 20px;
+margin-bottom: 20px;
+ }
 
 
 .online{
+  margin-left: 600px;
     width: 80px;
     position: static;
 }
-.online p
+
+
 .nav-img-lg{
+    justify-self: flex-end;
     display: flex;
+    position: static;
     gap: 10px;
     align-items: center;
 background-color: #fff;
@@ -324,6 +361,10 @@ padding:8px 15px;
     border-radius: 10px;
       box-shadow: 1.5px 1.5px  #E5E7EB;
 }
+
+.lg-right{
+    display: block;
+}
 .lg-left{
     width: 30%;
     display: flex;
@@ -331,5 +372,6 @@ padding:8px 15px;
 }
 .lg-left img{
     width: 40px;
-    border-radius: 30%;
+    padding: 0px;
+
 }}
