@@ -1,134 +1,134 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-.container{
-    width: 80%;
+.container {
+  width: 80%;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  background-color: #f9fafb;
+  text-align: right;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar {
+  margin-left: 10px;
+  display: none;
+  width: 14.667%;
+  background-color: #fff;
+  grid-area: sidebar;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  border: 1px solid #f0f1f2;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 0px 8px;
+}
+.side-container {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+.side-header {
+  margin: 30px 0;
+  display: flex;
+  line-height: 34px;
+  align-items: center;
 
+  gap: 15px;
+  text-align: right;
 }
-body{
-     font-family: "IBM Plex Sans Arabic", sans-serif;
-     background-color: #F9FAFB;
-     text-align: right;
+.side-header p {
+  font-size: 14px;
 }
-.flex-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.side-header h2 {
+  font-size: 36px;
+  font-weight: 700;
 }
-.sidebar{
-    margin-left: 10px;
-    display: none;
-    background-color: #fff;
-    grid-area: sidebar;
-    height: 100vh;
- 
-    border: 1px solid #F0F1F2;
-    box-shadow: rgba(0, 0, 0, 0.14) 0px 0px 8px;
+.side-header i {
+  width: 20px;
+  color: white;
+  font-size: 22px;
 }
-.side-container{
-    
-    display: flex;
-    margin:auto;
-    flex-direction: column;
-    align-items: flex-end;
-gap: 10px;
+.side-icon {
+  background-image: linear-gradient(to top, #4134dc, #2257f6);
+
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
 }
-.side-header{
-    margin: 30px 0;
-    display: flex;
-    line-height: 34px;
-    align-items: center;
-   
-    gap: 15px;
-    text-align: right;
+.side-item {
+  width: 100%;
+  color: #6a7282;
+  padding: 12px 16px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
 }
-.side-header p{
-    font-size: 14px;
+.home {
+  color: #155dfc;
+  background-color: #eff6ff;
 }
-.side-header h2{
-    font-size: 36px;
-    font-weight: 700;
+.quick i {
+  box-sizing: content-box;
+  border-radius: 8px;
+  padding: 10px;
 }
-.side-header i{
-width: 20px;
-    color: white;
-    font-size: 22px;
+.q1 i {
+  color: #155dfc;
+  background-color: #eaf3ff;
 }
-.side-icon{
-    background-image: linear-gradient(to top,#4134DC,#2257F6);
-   
-    width: 60px;
-    height: 60px;
-    border-radius: 15px;
+.q2 i {
+  color: #00a63e;
+  background-color: #e6faee;
 }
-.side-item{
-    width: 100%;
-    color: #6A7282;
-    padding: 12px 16px;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-    font-size: 16px;
-    font-weight: 600;
+.q3 i {
+  color: #9810fa;
+  background-color: #f7edff;
 }
-.home{
-    color: #155DFC;
-    background-color: #EFF6FF;
+.q4 i {
+  color: #f54900;
+  background-color: #fce5d5;
 }
-.quick i{
-    box-sizing: content-box;
-    border-radius: 8px;
-    padding: 10px;
+.section {
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 1.5px 1.5px #e5e7eb;
 }
-.q1 i{
-color:#155DFC ;
-background-color:#EAF3FF ;
+.section h3 {
+  font-size: 40px;
 }
-.q2 i{
-   color: #00A63E;
-    background-color: #E6FAEE; 
+.red {
+  color: red;
+  font-weight: 600;
 }
-.q3 i{
-color: #9810FA;
-background-color: #F7EDFF;
+.green {
+  color: green;
+  font-weight: 600;
 }
-.q4 i{
-color:#F54900 ;
-background-color:#FCE5D5 ;
-}
-.section{
-    background-color: #fff;
-    border: 1px solid #E5E7EB;
-    border-radius: 20px;
-    padding:40px 30px;
-    box-shadow: 1.5px 1.5px  #E5E7EB;
-}
-.section h3{
-    font-size: 40px;
-}
-.red{
-    color: red;
-    font-weight: 600;
-}
-.green{
-    color: green;
-    font-weight: 600;
-}
-.container2{
-    
-    
-width: 95%;
-margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 30px 0px;
-    grid-template-areas:
+.container2 {
+  width: 95%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 0px;
+  grid-template-areas:
     "nav nav nav"
     "money3 money3 money3"
     "money2 money2 money2"
@@ -153,294 +153,416 @@ margin: auto;
     "visa visa visa"
     "visa visa visa"
     "visa visa visa";
-    
 }
-.money3 { grid-area: money3; }
-
-.money2 { grid-area: money2; }
-
-.money1 { grid-area: money1;}
-
-.recent { grid-area: recent; }
-
-.trans { grid-area: trans; }
-
-.bells { grid-area: bells; }
-
-.visa { grid-area: visa; }
-
-.budget { grid-area: budget; }
-
-.analysis { grid-area: analysis; }
-
-.summary { grid-area: summary; }
-
-
-.nav{
-    grid-area: nav;
-    margin-top: 20px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-image: linear-gradient(
-    to right,
-    #F6F8FC,
-    #FFFFFF,
-    #F4F8FC);
-flex-wrap: wrap;
-padding: 20px 30px;
-
+.money3 {
+  grid-area: money3;
 }
 
-.nav-header{
-    margin: 0;
-    transform: scale(0.8);
-    
-    transform-origin: center right;
-}
-.online p, .online-mobile p{
-    background-color: #F0FDF4;
-    color: #008236;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    border-radius: 10px;
-    
-border: none;
-}
-.online{
-    display: none;
-}
-.online-mobile{
-    width: 100%;
-    order: 10;
-    display: block;
-
-    align-items: center;
-    text-align: center;
-}
-.nav-icons{
-    display: flex;
-    gap: 10px;
-    flex-direction: row-reverse;
-
-    top: 50px;
-    right: -7px;}
-.nav-icons :last-child{
-position: relative;
-}
-.nav-icons :last-child::after{
-    content:"2";
-    position: absolute;
-background-color: red;
-color: white;
-font-size: 16px;
-border-radius: 50%;
-width: 20px;
-
-height: 20px;
-top:-5px;
-right: -5px;
-}
-.nav-icons i{
-    font-size: 18px;
-    padding: 10px;
-    box-sizing: content-box;
-     border: 1px solid #E5E7EB;
-    border-radius: 10px;
-      box-shadow: 1.5px 1.5px  #E5E7EB;
-}
-.nav-img-lg{
-    display:flex;
-    gap: 10px;
-
-}
-.lg-right{
-    display: none;
-}
-.lg-left img{
-    width: 35px;
-    border-radius: 30%;
-padding: 12px;
-box-sizing: content-box;
-border: 1PX solid #E5E7EB;
-background-color: #fff;
-}
-.nav-left{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-}
-.recent-card1 , .recent-card2{
-    margin-top: 20px;
-    display: flex;
-   gap: 10px;
-   direction: rtl;
-   padding: 20px 15px;
-   border-radius: 10px;
-position: relative;
-}
-.recent-card1 p , .recent-card2 p{
-font-size: 13px;
-}
-.recent-card1 .time , .recent-card2 .time{
-    font-size: 13px;
-    margin-top: 10px;
-}
-.recent-card1{
-    background-color: #EFF6FF;
-    border-left: 5px solid #2F82FF;
-    
-}
-.recent-card1 .about ,.recent-card2 .about{
-position: absolute;
-top: 20px;
-left: 10px;
-color: #155DFC;
-font-size: 13px;
-font-weight: 600;
-}
-.recent-card2 .about{
-    color:#00A63E ;
-}
-.recent-card2{
-    background-color: #F0FDF4;
-    border-left: 5px solid #00C950;
-}
-.recent-card1 div i , .recent-card2 div i{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    padding: 3px;
-    border-radius: 50%;
-    box-sizing: content-box;
-}
-.recent-card1 div i{
-    background-color: #DBEAFE;
-    color: #155DFC;
-    
-}
-.recent-card2 div i{
-    background-color:#DBFCE7 ;
-    color: #00A63E;
-}
-@media screen and (min-width:760px) {
-    
-}
-@media screen and (min-width: 1280px) {
-    .sidebar{
-display: block;  }
-
-.container2 { 
-    width: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.8fr; 
-   padding-left: 33px;
-  gap: 25px 20px; 
-  grid-template-areas: 
-    "nav nav nav nav nav nav nav nav nav sidebar sidebar"
-    "money3 money3 money3 money2 money2 money2 money1 money1 money1 sidebar sidebar"
-    "money3 money3 money3 money2 money2 money2 money1 money1 money1 sidebar sidebar"
-    "trans trans trans trans trans trans recent recent recent sidebar sidebar"
-    "trans trans trans trans trans trans recent recent recent sidebar sidebar"
-    "trans trans trans trans trans trans recent recent recent sidebar sidebar"
-    "trans trans trans trans trans trans recent recent recent sidebar sidebar"
-    "trans trans trans trans trans trans bells bells bells sidebar sidebar"
-    "trans trans trans trans trans trans bells bells bells sidebar sidebar"
-    "trans trans trans trans trans trans bells bells bells sidebar sidebar"
-    "trans trans trans trans trans trans bells bells bells sidebar sidebar"
-    "visa visa visa analysis analysis analysis budget budget budget sidebar sidebar"
-    "visa visa visa analysis analysis analysis budget budget budget sidebar sidebar"
-    "visa visa visa analysis analysis analysis budget budget budget sidebar sidebar"
-    "visa visa visa analysis analysis analysis budget budget budget sidebar sidebar"
-    "visa visa visa summary summary summary budget budget budget sidebar sidebar"
-    "visa visa visa summary summary summary budget budget budget sidebar sidebar"
-    "visa visa visa summary summary summary budget budget budget sidebar sidebar"
-    "visa visa visa summary summary summary budget budget budget sidebar sidebar"; 
-}
-.sidebar { grid-area: sidebar; }
-.nav { grid-area: nav; }
-.money3 { grid-area: money3; }
-.money2 { grid-area: money2; }
-.money1 { grid-area: money1; }
-.recent { grid-area: recent; }
-.bells { grid-area: bells; }
-
-
-.nav-header{
-    
-    position: static;
-    transform: scale(0.9);
-}
-.nav-icons{
-    position: static;
-}
-.nav .side-header p{
-    transform: scale(1.4);
-    transform-origin: right center;
+.money2 {
+  grid-area: money2;
 }
 
-.section{
-    padding: 20px 30px;
+.money1 {
+  grid-area: money1;
+}
+
+.recent {
+  grid-area: recent;
+}
+
+.trans {
+  grid-area: trans;
+}
+
+.bells {
+  grid-area: bells;
+}
+
+.visa {
+  grid-area: visa;
+}
+
+.budget {
+  grid-area: budget;
+}
+
+.analysis {
+  grid-area: analysis;
+}
+
+.summary {
+  grid-area: summary;
 }
 
 .nav {
-    margin-top: 30px;
-display: flex;
-justify-content: space-between;
-flex-direction: row-reverse;
-
-padding: 20px 20px;
-margin-bottom: 20px;
- }
-
-
-.online{
-display: block;
-    width: 80px;
-    position: static;
+  grid-area: nav;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: linear-gradient(to right, #f6f8fc, #ffffff, #f4f8fc);
+  flex-wrap: wrap;
+  padding: 20px 30px;
 }
-.online-mobile{
+
+.nav-header {
+  margin: 0;
+  transform: scale(0.8);
+
+  transform-origin: center right;
+}
+.online p,
+.online-mobile p {
+  background-color: #f0fdf4;
+  color: #008236;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 10px;
+
+  border: none;
+}
+.online {
+  display: none;
+}
+.online-mobile {
+  width: 100%;
+  order: 10;
+  display: block;
+
+  align-items: center;
+  text-align: center;
+}
+.nav-icons {
+  display: flex;
+  gap: 10px;
+  flex-direction: row-reverse;
+
+  top: 50px;
+  right: -7px;
+}
+.nav-icons :last-child {
+  position: relative;
+}
+.nav-icons :last-child::after {
+  content: "2";
+  position: absolute;
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  border-radius: 50%;
+  width: 20px;
+
+  height: 20px;
+  top: -5px;
+  right: -5px;
+}
+.nav-icons i {
+  font-size: 18px;
+  padding: 10px;
+  box-sizing: content-box;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 1.5px 1.5px #e5e7eb;
+}
+.nav-img-lg {
+  display: flex;
+  gap: 10px;
+}
+.lg-right {
+  display: none;
+}
+.lg-left img {
+  width: 35px;
+  border-radius: 30%;
+  padding: 12px;
+  box-sizing: content-box;
+  border: 1px solid #e5e7eb;
+  background-color: #fff;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.recent-card1,
+.recent-card2 {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  direction: rtl;
+  padding: 20px 15px;
+  border-radius: 10px;
+  position: relative;
+}
+.recent-card1 p,
+.recent-card2 p {
+  font-size: 13px;
+}
+.recent-card1 .time,
+.recent-card2 .time {
+  font-size: 13px;
+  margin-top: 10px;
+}
+.recent-card1 {
+  background-color: #eff6ff;
+  border-left: 5px solid #2f82ff;
+}
+.recent-card1 .about,
+.recent-card2 .about {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  color: #155dfc;
+  font-size: 13px;
+  font-weight: 600;
+}
+.recent-card2 .about {
+  color: #00a63e;
+}
+.recent-card2 {
+  background-color: #f0fdf4;
+  border-left: 5px solid #00c950;
+}
+.recent-card1 div i,
+.recent-card2 div i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 3px;
+  border-radius: 50%;
+  box-sizing: content-box;
+}
+.recent-card1 div i {
+  background-color: #dbeafe;
+  color: #155dfc;
+}
+.recent-card2 div i {
+  background-color: #dbfce7;
+  color: #00a63e;
+}
+.more {
+  color: #155dfc;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.bells-container h3 {
+  font-size: 30px;
+  text-align: center;
+}
+.bells-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.bells-container p {
+  text-align: center;
+}
+.bell {
+  width: 45%;
+  text-align: center;
+  margin-top: 15px;
+  background-color: #f9fafb;
+  border-radius: 25px;
+  padding: 20px 5px;
+  box-sizing: content-box;
+  border: 1px solid #ffffff;
+}
+.orange {
+  color: #ff6900;
+}
+.bell .duration {
+  font-size: 13px;
+}
+.bell i {
+
+  padding: 7px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border-radius: 10px;
+
+}
+
+.bells-header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.bell-total {
+  width: 100%;
+  margin-top: 10px;
+}
+table{
+    font-size: 14.5px;
+    margin-top: 30px;
+    direction: rtl;
+    width: 100%;
+}
+td:nth-child(4),td:nth-child(5), td:nth-child(3){
     display: none;
 }
-.nav-right{
+.category{
+    margin-left: 500px;
+}
+table td{
+    border-bottom: 1px solid #eee;
+    border-collapse: collapse;
+    padding: 10px 0;
+
+}
+.table-flex{
+    display: flex;
+    gap: 10px;
+}
+table span{
+    font-size: 12.5px;
+}
+table p{
+    font-size: 15px;
+}
+table img{
+    width: 40px;
+    border-radius: 50%;
+display: inline-flex;
+}
+@media screen and (min-width: 760px) {
+}
+@media screen and (min-width: 1280px) {
+  .sidebar {
+    display: block;
+  }
+
+  .container2 {
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.8fr;
+    padding-left: 33px;
+    gap: 25px 20px;
+    grid-template-areas:
+      "nav nav nav nav nav nav nav nav nav sidebar sidebar"
+      "money3 money3 money3 money2 money2 money2 money1 money1 money1 sidebar sidebar"
+      "money3 money3 money3 money2 money2 money2 money1 money1 money1 sidebar sidebar"
+      "trans trans trans trans trans trans recent recent recent sidebar sidebar"
+      "trans trans trans trans trans trans recent recent recent sidebar sidebar"
+      "trans trans trans trans trans trans recent recent recent sidebar sidebar"
+      "trans trans trans trans trans trans recent recent recent sidebar sidebar"
+      "trans trans trans trans trans trans bells bells bells sidebar sidebar"
+      "trans trans trans trans trans trans bells bells bells sidebar sidebar"
+      "trans trans trans trans trans trans bells bells bells sidebar sidebar"
+      "trans trans trans trans trans trans bells bells bells sidebar sidebar"
+      "visa visa visa analysis analysis analysis budget budget budget sidebar sidebar"
+      "visa visa visa analysis analysis analysis budget budget budget sidebar sidebar"
+      "visa visa visa analysis analysis analysis budget budget budget sidebar sidebar"
+      "visa visa visa analysis analysis analysis budget budget budget sidebar sidebar"
+      "visa visa visa summary summary summary budget budget budget sidebar sidebar"
+      "visa visa visa summary summary summary budget budget budget sidebar sidebar"
+      "visa visa visa summary summary summary budget budget budget sidebar sidebar"
+      "visa visa visa summary summary summary budget budget budget sidebar sidebar";
+  }
+  .sidebar {
+    grid-area: sidebar;
+  }
+  .nav {
+    grid-area: nav;
+  }
+  .money3 {
+    grid-area: money3;
+  }
+  .money2 {
+    grid-area: money2;
+  }
+  .money1 {
+    grid-area: money1;
+  }
+  .recent {
+    grid-area: recent;
+  }
+  .bells {
+    grid-area: bells;
+  }
+
+  .nav-header {
+    position: static;
+    transform: scale(0.9);
+  }
+  .nav-icons {
+    position: static;
+  }
+  .nav .side-header p {
+    transform: scale(1.4);
+    transform-origin: right center;
+  }
+
+  .section {
+    padding: 20px 30px;
+  }
+
+  .nav {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+
+    padding: 20px 20px;
+    margin-bottom: 20px;
+  }
+
+  .online {
+    display: block;
+    width: 80px;
+    position: static;
+  }
+  .online-mobile {
+    display: none;
+  }
+  .nav-right {
     display: flex;
     flex-direction: row-reverse;
     gap: 50px;
     align-items: center;
-}
-.nav-left{
+  }
+  .nav-left {
     width: auto;
     gap: 20px;
-}
-.nav-img-lg{
+  }
+  .nav-img-lg {
     justify-self: flex-end;
     display: flex;
     position: static;
     gap: 10px;
     align-items: center;
-background-color: #fff;
-padding:8px 15px;
-   border: 1px solid #E5E7EB;
+    background-color: #fff;
+    padding: 8px 15px;
+    border: 1px solid #e5e7eb;
     border-radius: 10px;
-      box-shadow: 1.5px 1.5px  #E5E7EB;
-}
+    box-shadow: 1.5px 1.5px #e5e7eb;
+  }
 
-.lg-right{
+  .lg-right {
     display: block;
-}
-.lg-left{
+  }
+  .lg-left {
     width: 30%;
     display: flex;
     align-items: center;
-}
-.lg-left img{
+  }
+  .lg-left img {
     width: 40px;
     padding: 0px;
-
-}}
+  }
+  td:nth-child(4),td:nth-child(5), td:nth-child(3){
+    display: table-cell;
+}
+}
