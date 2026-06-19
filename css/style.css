@@ -149,10 +149,10 @@ body {
     "analysis analysis analysis"
     "summary summary summary"
     "summary summary summary"
-    "visa visa visa"
-    "visa visa visa"
-    "visa visa visa"
-    "visa visa visa";
+    "visas visas visas"
+    "visas visas visas"
+    "visas visas visas"
+    "visas visas visas";
 }
 .money3 {
   grid-area: money3;
@@ -178,8 +178,8 @@ body {
   grid-area: bells;
 }
 
-.visa {
-  grid-area: visa;
+.visas {
+  grid-area: visas;
 }
 
 .budget {
@@ -384,7 +384,6 @@ body {
   font-size: 13px;
 }
 .bell i {
-
   padding: 7px;
   width: 35px;
   height: 35px;
@@ -393,7 +392,6 @@ body {
   align-items: center;
   margin: auto;
   border-radius: 10px;
-
 }
 
 .bells-header {
@@ -405,62 +403,113 @@ body {
   width: 100%;
   margin-top: 10px;
 }
-table{
-    font-size: 14.5px;
-    margin-top: 30px;
-    direction: rtl;
-    width: 100%;
+table {
+  font-size: 14.5px;
+  margin-top: 30px;
+  direction: rtl;
+  width: 100%;
 }
-td:nth-child(4),td:nth-child(5), td:nth-child(3){
-    display: none;
+td:nth-child(4),
+td:nth-child(5),
+td:nth-child(3) {
+  display: none;
 }
-.category{
-    margin-left: 500px;
+.category {
+  margin-left: 500px;
 }
-table td{
-    border-bottom: 1px solid #eee;
-    border-collapse: collapse;
-    padding: 15px 0;
-
+table td {
+  border-bottom: 1px solid #eee;
+  border-collapse: collapse;
+  padding: 15px 0;
 }
-.status span{
+.status span {
   font-size: 12px;
   padding: 1px 10px;
   font-weight: 600;
-  background-color: #DBFCE7;
+  background-color: #dbfce7;
   border-radius: 20px;
-  color:#0F8788 ;
+  color: #0f8788;
 }
-.pend span{
-  background-color:#FEF9C2 ;
-  color:#894B00;
+.pend span {
+  background-color: #fef9c2;
+  color: #894b00;
 }
-.table-flex{
-    display: flex;
-    gap: 10px;
+.table-flex {
+  display: flex;
+  gap: 10px;
 }
-table span{
-    font-size: 12.5px;
+table span {
+  font-size: 12.5px;
 }
-table p{
-    font-size: 15px;
+table p {
+  font-size: 15px;
 }
-table img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-display: inline-flex;
+table img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
 }
-.table-icon{
-   padding: 7px;
+.table-icon {
+  padding: 7px;
   width: 40px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   border-radius: 50%;
-  
+}
+.visa {
+  margin-top: 30px;
+}
+.visa-front {
+  color: #fff;
+  border-radius: 25px;
+  background-color: #372aac;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+
+}
+.visa-number{
+  margin-top: 22px;
+  letter-spacing: 3px;
+  direction: rtl;
+  font-size: 20px;
+  font-weight: 600;
+}
+.visa-footer{
+display: flex;
+flex-direction: row-reverse;
+justify-content: space-between;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+.card-date, .cardholder{
+  display: flex;
+  font-size: 14px;
+  flex-direction: column;
+}
+.visa-header {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+.inner {
+  width: 25px;
+  height: 15px;
+  background-color: #9f99d7;
+  border-radius: 5px;
+}
+.outer {
+  display: flex;
+
+  width: 50px;
+  height: 30px;
+  background-color: #4763C6;
+  border-radius: 10px;
 }
 @media screen and (min-width: 760px) {
 }
@@ -486,14 +535,14 @@ display: inline-flex;
       "trans trans trans trans trans trans bells bells bells sidebar sidebar"
       "trans trans trans trans trans trans bells bells bells sidebar sidebar"
       "trans trans trans trans trans trans bells bells bells sidebar sidebar"
-      "visa visa visa analysis analysis analysis budget budget budget sidebar sidebar"
-      "visa visa visa analysis analysis analysis budget budget budget sidebar sidebar"
-      "visa visa visa analysis analysis analysis budget budget budget sidebar sidebar"
-      "visa visa visa analysis analysis analysis budget budget budget sidebar sidebar"
-      "visa visa visa summary summary summary budget budget budget sidebar sidebar"
-      "visa visa visa summary summary summary budget budget budget sidebar sidebar"
-      "visa visa visa summary summary summary budget budget budget sidebar sidebar"
-      "visa visa visa summary summary summary budget budget budget sidebar sidebar";
+      "visas visas visas analysis analysis analysis budget budget budget sidebar sidebar"
+      "visas visas visas analysis analysis analysis budget budget budget sidebar sidebar"
+      "visas visas visas analysis analysis analysis budget budget budget sidebar sidebar"
+      "visas visas visas analysis analysis analysis budget budget budget sidebar sidebar"
+      "visas visas visas summary summary summary budget budget budget sidebar sidebar"
+      "visas visas visas summary summary summary budget budget budget sidebar sidebar"
+      "visas visas visas summary summary summary budget budget budget sidebar sidebar"
+      "visas visas visas summary summary summary budget budget budget sidebar sidebar";
   }
   .sidebar {
     grid-area: sidebar;
@@ -586,7 +635,9 @@ display: inline-flex;
     width: 40px;
     padding: 0px;
   }
-  td:nth-child(4),td:nth-child(5), td:nth-child(3){
+  td:nth-child(4),
+  td:nth-child(5),
+  td:nth-child(3) {
     display: table-cell;
-}
+  }
 }
